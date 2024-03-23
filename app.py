@@ -12,7 +12,6 @@ MONGODB_URI = os.environ.get("MONGODB_URI")
 DB_NAME =  os.environ.get("DB_NAME")
 
 client = MongoClient(MONGODB_URI)
-
 db = client[DB_NAME]
 
 app = Flask(__name__)
@@ -33,8 +32,6 @@ def bucket_post():
         'done':0,
         'created_at': current_time,
         'updated_at': current_time
-        
-
     }
     db.bucket.insert_one(doc)
     return jsonify({'msg':'Data Saved!'})
