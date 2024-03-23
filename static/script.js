@@ -51,6 +51,8 @@ function save_bucket() {
             confirmButtonText: 'OK'
         });
     } else {
+        let spinner = new Spinner().spin();
+        $('#loading').append(spinner.el);
         $.ajax({
             type: "POST",
             url: "/bucket",
@@ -58,6 +60,7 @@ function save_bucket() {
                 bucket_give: bucket
             },
             success: function(response) {
+                spinner.stop();
                 Swal.fire({
                     title: 'Notification',
                     text: response["msg"],

@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Bucket List" />
+    <meta property="og:description" content="Bikin bucket list kamu jadi keren dengan situs kita! Mulai dari destinasi liburan keren sampe hal-hal kecil yang pengen kamu lakuin, kita siap bantu kamu ngerencanain dan ngeraihin mimpi-mimpi kamu. Gabung yuk, dan mulai kejar mimpimu sekarang!" />
+    <meta property="og:image" content="{{ url_for('static', filename = 'bucketlist.jpg') }}" />
+    <link rel="icon" href="static/bucketlist.jpg" type="image/jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+
     <!-- Import CSS -->
     <link rel="stylesheet" href="static/style.css">
     <!-- Import JQuery -->
@@ -32,6 +38,10 @@
             <button onclick="save_bucket()" type="button" class="btn btn-outline-primary">Save</button>
         </div>
     </div>
+    <div id="loading">
+        
+    </div>
+
     <div class="mybox" id="bucket-list">
         <li>
             <h2>✅ Bucket list masih kosong!!</h2>
